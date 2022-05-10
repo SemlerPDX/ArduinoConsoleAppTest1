@@ -84,9 +84,9 @@ namespace ArduinoConsoleAppTest1
 
         static void Main(string[] args)
         {
-			Console.WriteLine("TESTER");
+            Console.WriteLine("TESTER");
             OpenDataConnection();
             Thread.Sleep(2500);
-		}
+	}
     }
 }
