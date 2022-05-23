@@ -6,6 +6,7 @@ I am designing a voice controlled temperature and sensor program (inside the Voi
 My Arduino IDE and libraries are all up to date.  My sketch will send DHT data to my program for text-to-speech replies on voice command request.
 
 This .NET Framework (4.5) Console App is an Arduino hardware error demonstration along with the Arduino Sketch here:
+
   (the Hello-World_ArduinoConsoleApp_CompanionSketch requires no attached devices or use of pins:)
   https://pastebin.com/tVVtkGPf
 
