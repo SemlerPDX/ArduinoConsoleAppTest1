@@ -15,28 +15,30 @@ This is a C# .NET Framework (4.5) Console App, similar enough to my final progra
   https://pastebin.com/C99WT1V4
 
 _____
-Repro Steps:
+**Repro Steps:**
 
  1. Using an Arduino Micro (or, presumably Leonardo as well, I only have Micro), upload either of the test sketches above
- 2. Use this ArduinoConsoleAppTest1 to observe eventual and inevitable timeouts of Serial.Read() attempts
+ 2. Open the Arduino IDE (set for this board) and the Serial Monitor - verify consistent serial data, no timeouts/issues
+ 3. Use this ArduinoConsoleAppTest1 to observe eventual and inevitable timeouts of Serial.Read() attempts
+ 4. Again, open the Arduino IDE (set for this board) and the Serial Monitor - view consistent serial data, no timeouts/issues
+ 5. Use this ArduinoConsoleAppTest1 again as desired, observe same problem over and over...
  
- 3. Next, using an Uno/Nano, upload the sketch listed above (either hello-world or full DHT11/22 tester)
- 4. Again, use this ArduinoConsoleAppTest1 to instead view consistent serial data line after line without fail
+   -(showing this is not present on Uno/Nano)-
+ 1. Next, using an Uno/Nano, upload the sketch listed above (either hello-world or full DHT11/22 tester)
+ 2. Again, use this ArduinoConsoleAppTest1 to instead view consistent serial data line after line without fail
 _____
 
-The issue seems to be with Arduino Micro and not present when running this same sketch on an Uno/Nano
-
-Serial write times out eventually, on top of the fact that only the first one or two reads actually retrieve new data.
+The issue seems to be with Arduino Micro and not present when running this same sketch on an Uno/Nano; Serial write times out eventually, on top of the fact that only the first one or two reads actually retrieve new data.
 
 Anyone with an Arduino Micro, or equivalent clone such as Spark Fun Pro Micro (or any clone of that, KeeYees, OsoYoo, etc.) can test this.
 
 
 Other issues of note, if the Console App were to attempt to close the port and reopen it, timeouts begin immediately, cannot re-open the port.
 
-Opening the Arduino IDE to the Serial Monitor will show good data, and once closed, can run the Console App again as normal.
+Opening the Arduino IDE to the Serial Monitor will again show good data, and once closed, can run the Console App again as normal until timeouts begin once more.
 
 
-I cannot believe no one else has had these issues with Arduino Micro (or clones) and I'm drawing a blank as to how to proceed with testing/troubleshooting.  I continue to assume this is my own misunderstanding of the differences in the Uno/Nano/Mini class boards and the Micro/Leonardo with the Serial USB CDC.  If there is somewhere I can learn more, or if there is a way to get around these sorts of timeouts, perhaps a better method that must be used with these boards, I would greatly appreciate any tips or suggestions.
+I'm usually not the type to find problems like this, I cannot believe no one else has had these issues with Arduino Micro (or clones) and I'm drawing a blank as to how to proceed with testing/troubleshooting.  I continue to assume this is my own misunderstanding of the differences in the Uno/Nano/Mini class boards and the Micro/Leonardo with the USB CDC Serial hardware.  If there is somewhere I can learn more, or if there is a way to get around these sorts of timeouts, perhaps a better method that must be used with these boards, I would greatly appreciate any tips or suggestions.
 
 
 My discord is here - same name (SemlerPDX): https://discord.gg/MXGxmvT
