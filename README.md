@@ -17,11 +17,11 @@ This is a C# .NET Framework (4.5) Console App, similar enough to my final progra
 _____
 Repro Steps:
 
- -Using an Arduino Micro (or, presumably Leonardo as well, I only have Micro), upload either of the test sketches above
- -Use this ArduinoConsoleAppTest1 to observe eventual and inevitable timeouts of Serial.Read() attempts
+ 1. Using an Arduino Micro (or, presumably Leonardo as well, I only have Micro), upload either of the test sketches above
+ 2. Use this ArduinoConsoleAppTest1 to observe eventual and inevitable timeouts of Serial.Read() attempts
  
- -Next, using an Uno/Nano, upload the sketch listed above (either hello-world or full DHT11/22 tester)
- -Again, use this ArduinoConsoleAppTest1 to instead view consistent serial data line after line without fail
+ 3. Next, using an Uno/Nano, upload the sketch listed above (either hello-world or full DHT11/22 tester)
+ 4. Again, use this ArduinoConsoleAppTest1 to instead view consistent serial data line after line without fail
 _____
 
 The issue seems to be with Arduino Micro and not present when running this same sketch on an Uno/Nano
