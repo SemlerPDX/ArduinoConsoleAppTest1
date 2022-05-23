@@ -16,7 +16,7 @@ namespace ArduinoConsoleAppTest1
             bool dataComplete = false;
             byte[] inBuffer = new byte[1];
 
-            SerialPort1.PortName = "COM13";
+            SerialPort1.PortName = "COM13"; // !!!  Change to the COMPORT of your Aduino Device between tests!!!
             SerialPort1.BaudRate = 9600;
             SerialPort1.DataBits = 8;
             SerialPort1.Parity = Parity.None;
