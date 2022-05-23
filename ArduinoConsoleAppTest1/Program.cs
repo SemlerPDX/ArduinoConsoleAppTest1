@@ -25,17 +25,17 @@ namespace ArduinoConsoleAppTest1
             SerialPort1.Encoding = System.Text.Encoding.Default;
             SerialPort1.ReadTimeout = 500;
 
-            if (SerialPortDHT1.IsOpen)
+            if (SerialPort1.IsOpen)
             {
-                SerialPortDHT1.Close();
-                while (SerialPortDHT1.IsOpen)
+                SerialPort1.Close();
+                while (SerialPort1.IsOpen)
                     Thread.Sleep(150);
                 Thread.Sleep(2000); //Restart Delay for Arduino Sketch?
             }
             
             try
             {
-                SerialPortDHT1.Open();
+                SerialPort1.Open();
                 Thread.Sleep(100);
             }
             catch (Exception ex)
