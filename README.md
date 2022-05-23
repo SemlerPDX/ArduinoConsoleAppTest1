@@ -3,7 +3,7 @@
 This .NET Framework Console App is an Arduino hardware error demonstration along with the Arduino Sketch here:
 https://pastebin.com/C99WT1V4
 
-The issue seems to be with Arduino Micro and not present when running this same sketch on an Uno
+The issue seems to be with Arduino Micro and not present when running this same sketch on an Uno/Nano
 
 Serial write times out eventually, on top of the fact that only the first one or two reads actually retrieve new data.
 
