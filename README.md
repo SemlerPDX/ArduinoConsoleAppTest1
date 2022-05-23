@@ -6,14 +6,15 @@ I am designing a voice controlled temperature and sensor program (inside the Voi
 My Arduino IDE and libraries are all up to date.  My sketch will send DHT data to my program for text-to-speech replies on voice command request.
 
 This .NET Framework (4.5) Console App is an Arduino hardware error demonstration along with the Arduino Sketch here:
-(the Hello-World_ArduinoConsoleApp_CompanionSketch requires no attached devices or use of pins:)
-https://pastebin.com/tVVtkGPf
+  (the Hello-World_ArduinoConsoleApp_CompanionSketch requires no attached devices or use of pins:)
+  https://pastebin.com/tVVtkGPf
 
-(or if you want to wire up a DHT11 or DHT22, the exact sketch for my future program was this:)
-https://pastebin.com/C99WT1V4
+  (or if you want to wire up a DHT11 or DHT22, the exact sketch for my future program was this:)
+  https://pastebin.com/C99WT1V4
 
 ============
 Repro Steps:
+
  -Using an Arduino Micro (or, presumably Leonardo as well, I only have Micro), upload either of the test sketches above
  -Use this ArduinoConsoleAppTest1 to observe eventual and inevitable timeouts of Serial.Read() attempts
  
