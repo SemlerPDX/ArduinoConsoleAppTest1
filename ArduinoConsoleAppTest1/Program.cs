@@ -25,10 +25,27 @@ namespace ArduinoConsoleAppTest1
             SerialPort1.Encoding = System.Text.Encoding.Default;
             SerialPort1.ReadTimeout = 500;
 
-            SerialPort1.Open();
-            Thread.Sleep(100);
+            if (SerialPortDHT1.IsOpen)
+            {
+                SerialPortDHT1.Close();
+                while (SerialPortDHT1.IsOpen)
+                    Thread.Sleep(150);
+                Thread.Sleep(2000); //Restart Delay for Arduino Sketch?
+            }
+            
+            try
+            {
+                SerialPortDHT1.Open();
+                Thread.Sleep(100);
+            }
+            catch (Exception ex)
+            {
+                dataComplete = true;
+                dataBuild = "nothing";
+            	Console.WriteLine("Error: Serial Port Open() ended at exception: " + ex.ToString(), "red");
+            }
 
-            Console.WriteLine("Beginning Serial Monitor Loop...");
+            Console.WriteLine("Beginning Serial Monitor Loop Test...");
 
             while (dataComplete != true)
             {
@@ -69,8 +86,8 @@ namespace ArduinoConsoleAppTest1
                         Console.WriteLine(dataBuild);
                         dataBuild = "";
                         dataComplete = false;
-                        //SerialPort1.DiscardOutBuffer();
-                        //SerialPort1.DiscardInBuffer();
+                        //SerialPort1.DiscardOutBuffer();  //Seems not helpful/applicable here...
+                        //SerialPort1.DiscardInBuffer();  //Seems not helpful/applicable here...
                         Thread.Sleep(2000);
                     }
                 }
@@ -79,12 +96,10 @@ namespace ArduinoConsoleAppTest1
             //SerialPort1.DiscardOutBuffer();
             //SerialPort1.DiscardInBuffer();
             SerialPort1.Dispose();
-            //VA.SetText("AVCS_DHT1_DATA", null); //this loop will exist in VoiceAttack program as inline function, setting this GVAR
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("TESTER");
             OpenDataConnection();
             Thread.Sleep(2500);
 	}
