@@ -1,6 +1,6 @@
 # ArduinoConsoleAppTest1
 
-==PROBLEM:  Arduino Micro/Leonardo begin to timeout when reading serial data continuously, or on any use of Serial.Close()===
+===PROBLEM:  Arduino Micro/Leonardo begin to timeout when reading serial data continuously, or on any use of Serial.Close()===
 
 I am designing a voice controlled temperature and sensor program (inside the VoiceAttack program) written in C# complied for .NET Framework 4.5. 
 My Arduino IDE and libraries are all up to date.  My sketch will send DHT data to my program for text-to-speech replies on voice command request.
@@ -12,7 +12,7 @@ This .NET Framework (4.5) Console App is an Arduino hardware error demonstration
   (or if you want to wire up a DHT11 or DHT22, the exact sketch for my future program was this:)
   https://pastebin.com/C99WT1V4
 
-============
+_____
 Repro Steps:
 
  -Using an Arduino Micro (or, presumably Leonardo as well, I only have Micro), upload either of the test sketches above
@@ -20,7 +20,7 @@ Repro Steps:
  
  -Next, using an Uno/Nano, upload the sketch listed above (either hello-world or full DHT11/22 tester)
  -Again, use this ArduinoConsoleAppTest1 to instead view consistent serial data line after line without fail
-============
+_____
 
 The issue seems to be with Arduino Micro and not present when running this same sketch on an Uno/Nano
 
