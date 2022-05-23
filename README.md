@@ -6,7 +6,7 @@ I am designing a voice controlled temperature and sensor program (inside the Voi
 My Arduino IDE and libraries are all up to date.  My sketch will send DHT data to my program for text-to-speech replies on voice command request.  I was using Arduino Micro as the IDE Serial Monitor always showed good data, but not in my program.  Now using Nano without the issues described below.  My solution is currently 'use the right board for the project' due to this problem, outlining it here for others and for future reference.
 
 
-This C# .NET Framework (4.5) Console App similar to my final program as an Arduino hardware error demonstration along with the Arduino Sketch here:
+This is a C# .NET Framework (4.5) Console App, similar enough to my final program, as an Arduino hardware error demonstration along with the Arduino Sketch here:
 
   (the Hello-World_ArduinoConsoleApp_CompanionSketch requires no attached devices or use of pins:)
   https://pastebin.com/tVVtkGPf
