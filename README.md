@@ -3,9 +3,10 @@
 **===PROBLEM:  Arduino Micro/Leonardo begin to timeout when reading serial data continuously, or on any use of Serial.Close()===**
 
 I am designing a voice controlled temperature and sensor program (inside the VoiceAttack program) written in C# complied for .NET Framework 4.5. 
-My Arduino IDE and libraries are all up to date.  My sketch will send DHT data to my program for text-to-speech replies on voice command request.
+My Arduino IDE and libraries are all up to date.  My sketch will send DHT data to my program for text-to-speech replies on voice command request.  I was using Arduino Micro as the IDE Serial Monitor always showed good data, but not in my program.  Now using Nano without the issues described below.  My solution is currently 'use the right board for the project' due to this problem, outlining it here for others and for future reference.
 
-This .NET Framework (4.5) Console App is an Arduino hardware error demonstration along with the Arduino Sketch here:
+
+This C# .NET Framework (4.5) Console App similar to my final program as an Arduino hardware error demonstration along with the Arduino Sketch here:
 
   (the Hello-World_ArduinoConsoleApp_CompanionSketch requires no attached devices or use of pins:)
   https://pastebin.com/tVVtkGPf
