@@ -28,7 +28,7 @@ _____
  2. Again, use this ArduinoConsoleAppTest1 to instead view consistent serial data line after line without fail
 _____
 
-The issue seems to be with Arduino Micro and not present when running this same sketch on an Uno/Nano; Serial write times out eventually, on top of the fact that only any attempt to Close() the port results in timeouts on any further read attempts other than Arduino IDE Serial Monitor.
+The issue seems to be with Arduino Micro and not present when running this same sketch on an Uno/Nano; Serial write times out eventually, on top of the fact that any attempt to Close() the port results in timeouts on any further read attempts other than Arduino IDE Serial Monitor.
 
 Anyone with an Arduino Micro, or equivalent clone such as Spark Fun Pro Micro (or any clone of that, KeeYees, OsoYoo, etc.) can test this.
 
