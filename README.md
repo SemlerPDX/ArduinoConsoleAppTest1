@@ -19,14 +19,14 @@ _____
 
  1. Using an Arduino Micro (or, presumably Leonardo as well, I only have Micro), upload either of the test sketches above
  2. Open the Arduino IDE (set for this board) and the Serial Monitor - verify consistent serial data, no timeouts/issues
- 3. Edit the Program.cs and change the PortName on line 19 to the COMPORT of this board
+ 3. Edit this Program.cs and change the PortName on line 19 to the COMPORT of this board
  4. Use this ArduinoConsoleAppTest1 to observe eventual and inevitable timeouts of Serial.Read() attempts
  5. Again, open the Arduino IDE (set for this board) and the Serial Monitor - view consistent serial data, no timeouts/issues
  6. Use this ArduinoConsoleAppTest1 again as desired, observe same problem over and over...
  
    -(showing this is not present on Uno/Nano)-
  1. Next, using an Uno/Nano, upload the sketch listed above (either hello-world or full DHT11/22 tester)
- 2. Again, edit the Program.cs and change the PortName on line 19 to the COMPORT of this board
+ 2. Again, edit this Program.cs and change the PortName on line 19 to the COMPORT of this board
  3. And again, use this ArduinoConsoleAppTest1 (and again, changing the PortName to the COMPORT of this board) to instead view consistent serial data line after line without fail
 _____
 
