@@ -92,9 +92,7 @@ namespace ArduinoConsoleAppTest1
                     }
                 }
             }
-
-            //SerialPort1.DiscardOutBuffer();
-            //SerialPort1.DiscardInBuffer();
+            
             SerialPort1.Dispose();
         }
 
