@@ -11,7 +11,7 @@ This is a C# .NET Framework (4.5) Console App, similar enough to my final progra
   (the Hello-World_ArduinoConsoleApp_CompanionSketch requires no attached devices or use of pins:)
   https://pastebin.com/tVVtkGPf
 
-  (or if you want to wire up a DHT11 or DHT22, the exact sketch for my future program was this:)
+  (or if you want to wire up a DHT11 or DHT22, the exact sketch at time of writing was this:)
   https://pastebin.com/C99WT1V4
 
 _____
