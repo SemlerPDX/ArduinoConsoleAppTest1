@@ -27,7 +27,7 @@ _____
    -(showing this is not present on Uno/Nano)-
  1. Next, using an Uno/Nano, upload the sketch listed above (either hello-world or full DHT11/22 tester)
  2. Again, edit this Program.cs and change the PortName on line 19 to the COMPORT of this board
- 3. And again, use this ArduinoConsoleAppTest1 (and again, changing the PortName to the COMPORT of this board) to instead view consistent serial data line after line without fail
+ 3. And again, use this ArduinoConsoleAppTest1 to instead view consistent serial data line after line without fail
 _____
 
 The issue seems to be with Arduino Micro and not present when running this same sketch on an Uno/Nano; Serial write times out eventually, on top of the Close() issue below.
